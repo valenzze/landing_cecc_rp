@@ -54,8 +54,9 @@
 				$escuela 		= utf8_encode($_REQUEST['escuela']);
 				$fecha_ok		= date("Y-m-d H:i:s");
 				mysqli_query($link, "INSERT INTO leads (location, nombre, email, telefono, escuela, fecha) values ('$location', '$nombre', '$email', '$telefono', '$escuela', '$fecha_ok')");
+				print("xXXx");
 			}
-			print($manda);
+			//print($manda);
 
 	}
 	else{
