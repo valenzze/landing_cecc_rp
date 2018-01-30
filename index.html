@@ -344,7 +344,7 @@
            data: {nombre: inp_nombre, email: inp_email, telefono: inp_telefono, escuela: inp_escuela}, // serializes the form's elements.
            success: function(data)
            {
-               
+               /*
                if(data == 1){
                   alert("Gracias sus datos han sido enviados exitosamente");
                   $("#inp_nombre").val("");
@@ -355,6 +355,19 @@
                else{
                 alert("Problemas enviando correo -- "+data);
                }
+               */
+               if(data == "xXXx"){
+                  $("#inp_nombre").val("");
+                  $("#inp_email").val("");
+                  $("#inp_telefono").val("");
+                  $("#inp_escuela").val("");
+                  url = "thankyou.php";
+                  $( location ).attr("href", url);
+               }
+               else{
+                alert("Problemas enviando correo -- "+data);
+               }
+               
                
            }
          });
